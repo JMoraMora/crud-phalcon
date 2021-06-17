@@ -1,7 +1,12 @@
 <?php
+namespace App\Models;
 
+use Phalcon\Mvc\Model\ResultSetInterface;
 class Tasks extends \Phalcon\Mvc\Model
 {
+    public static function saludo(){
+        return 'hola';
+    }
 
     /**
      *
@@ -30,11 +35,9 @@ class Tasks extends \Phalcon\Mvc\Model
      * @param mixed $parameters
      * @return Tasks[]|Tasks|\Phalcon\Mvc\Model\ResultSetInterface
      */
-    public static function find($parameters = null): \Phalcon\Mvc\Model\ResultsetInterface
-    {
-        return parent::find($parameters);
-    }
-
+    public static function find(
+        mixed $parameters = null
+    ): ResultsetInterface
     /**
      * Allows to query the first record that match the specified conditions
      *
